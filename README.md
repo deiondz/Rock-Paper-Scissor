@@ -1,0 +1,2 @@
+# Rock-Paper-Scissor
+A rock paper scissor game made using vanilla JS, HTML, and CSS would typically consist of a simple user interface that allows the user to interact with the game. The game would involve the player choosing either "rock," "paper," or "scissors" and then having the computer randomly choose its own move. 
