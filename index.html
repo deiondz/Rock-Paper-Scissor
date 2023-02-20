@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://cdn-icons-png.flaticon.com/512/9767/9767411.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Rock Paper Scissor</title>
+  </head>
+  <body>
+    <div class="mobile">
+      <p>
+        Sorry, currently the website works only for desktop users. Blame the dev
+        as he is lazy to make the website responsive.
+      </p>
+      <p>Dev : Ahh I'm still learning responsive css, bare with me :/</p>
+    </div>
+    <div class="container">
+      <h1 class="fs-xl fw-bold text-primary">Rock Paper Scissor</h1>
+      <div class="scoreboard">
+        <div class="box-1 bg-secondary fs-m fw-bold" id="userScore"></div>
+        <div class="rectangle bg-primary">
+          <li class="fs-m fw-bold text-white" id="userName">You</li>
+          <li class="fs-m fw-bold text-white">Computer</li>
+        </div>
+        <div class="box-2 bg-secondary fs-m fw-bold" id="computerScore"></div>
+      </div>
+      <div class="result bg-purple fs-s fw-bold" id="resultPrint">
+        Pick your move wisely!
+      </div>
+      <div class="picker">
+        <div class="rock bg-shadow fw-bold fs-m" id="r">Rock</div>
+        <div class="paper bg-shadow fw-bold fs-m" id="p">Paper</div>
+        <div class="scissor bg-shadow fw-bold fs-m" id="s">Scissor</div>
+      </div>
+      <button class="bg-primary fs-s fw-bold text-white" id="reset">
+        Reset
+      </button>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

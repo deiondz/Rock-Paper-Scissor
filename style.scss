@@ -1,0 +1,302 @@
+:root {
+  /* Colours */
+  --clr-primary: #f16767;
+  --clr-secondary: #ffb84c;
+
+  --clr-purple: rgba(164, 89, 209, 0.67);
+  --clr-shadow: rgba(217, 217, 217, 1);
+  --clr-black: rgba(0, 0, 0, 0.74);
+  --clr-white: #ffffff;
+
+  /* Font family */
+  --ff: "Plus Jakarta Sans", sans-serif;
+
+  /*  Font weight */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-Bold: 700;
+
+  /* Font size */
+  --fs-100: 1rem;
+  --fs-200: 2rem;
+  --fs-300: 4rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol,
+li {
+  list-style: none;
+}
+button {
+  all: unset;
+  cursor: pointer;
+}
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: var(--ff);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utility Classes */
+
+.text-primary {
+  color: var(--clr-black);
+}
+
+.text-secondary {
+  color: var(--clr-white);
+}
+
+.text-white {
+  color: #ffffff;
+}
+// Box colors //
+
+.bg-primary {
+  background-color: var(--clr-primary);
+}
+
+.bg-purple {
+  background-color: var(--clr-purple);
+}
+
+.bg-secondary {
+  background-color: var(--clr-secondary);
+}
+.bg-shadow {
+  background-color: var(--clr-shadow);
+}
+
+// Font weight
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fw-medium {
+  font-weight: var(--fw-medium);
+}
+
+.fw-bold {
+  font-weight: var(--fw-Bold);
+}
+
+// font size
+
+.fs-s {
+  font-size: var(--fs-100);
+}
+
+.fs-m {
+  font-size: var(--fs-200);
+}
+
+.fs-xl {
+  font-size: var(--fs-300);
+}
+
+// Main
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 247, 247, 1);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.scoreboard {
+  width: 1018px;
+  height: 109px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 43px;
+  .box-1,
+  .box-2 {
+    display: grid;
+    place-items: center;
+    width: 109px;
+    height: 109px;
+  }
+
+  .rectangle {
+    width: 800px;
+    height: 109px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
+.result {
+  display: grid;
+  place-content: center;
+  width: 599px;
+  height: 62px;
+  border-radius: 8px;
+  margin-bottom: 49px;
+}
+
+.picker {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 1018px;
+  margin-bottom: 30px;
+  .rock {
+    display: grid;
+    place-items: center;
+    width: 287px;
+    height: 287px;
+    border-radius: 600px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .paper {
+    display: grid;
+    place-items: center;
+    width: 287px;
+    height: 287px;
+    border-radius: 600px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .scissor {
+    display: grid;
+    place-items: center;
+    width: 287px;
+    height: 287px;
+    border-radius: 600px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+}
+
+button {
+  width: 150px;
+  height: 66px;
+  display: grid;
+  place-content: center;
+  border-radius: 17px;
+  transition: 0.5s;
+}
+
+button:hover {
+  transition: 0.5s;
+  scale: 0.9;
+  border-radius: 26px;
+}
+
+.rock:hover {
+  transition: 0.2s;
+  scale: 0.9;
+}
+
+.paper:hover {
+  transition: 0.2s;
+  scale: 0.9;
+}
+
+.scissor:hover {
+  transition: 0.2s;
+  scale: 0.9;
+}
+
+.won {
+  background-color: #64ff7b;
+  transition: 0.9s;
+}
+
+.lost {
+  background-color: var(--clr-primary);
+  transition: 0.9s;
+}
+
+.draw {
+  background-color: var(--clr-secondary);
+  transition: 0.9s;
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  p {
+    border: 4px solid;
+    padding: 20px;
+    margin: 10px;
+  }
+}
